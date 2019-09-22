@@ -9,6 +9,7 @@ RUN apt-get update && apt-get upgrade -y; echo "daemon off;" >> /etc/nginx/nginx
 
 # Copy of personnal HTML index
 COPY index.html /usr/share/nginx/html
+COPY Images /usr/share/nginx/html/Images
 
 # Expose HTTP
 EXPOSE 80
