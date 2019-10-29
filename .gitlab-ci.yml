@@ -11,7 +11,7 @@ build:
     - master
   before_script:
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
-  script_
+  script:
     - docker build -t ${CI_REGISTRY}/${CI_PROJECT_PATH}:latest .
     - docker push ${CI_REGISTRY}/${CI_PROJECT_PATH}:latest
 
