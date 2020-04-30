@@ -1,0 +1,13 @@
+.load {
+  width: 30vh;
+  height: 22.5vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+.load__bar {
+  background-color: #15DEA5;
+  height: 100%;
+  width: 3vh;
+}
+
+/*# sourceMappingURL=style.css.map */
