@@ -1,5 +1,9 @@
 $cd-bars: #15DEA5;
-$size: 3vh;
+$cd-bars-inv: #0E397F;
+$size: 1vh;
+$num-bars: 5;
+$anim-dur: 1000ms;
+$anim-delay: $anim-dur / $num-bars;
 
 .load {
     width: $size*10;
@@ -10,5 +14,27 @@ $size: 3vh;
         background-color: #15DEA5;
         height: 100%;
         width: $size;
+        animation: bars $anim-dur backwards infinite ease-out alternate;
+        @for $i from 1 through $num-bars {
+            &--#{$i} {
+                animation-delay: $anim-delay * $i;
+            }
+            &--#{$i}-inv {
+              animation-delay: $anim-delay * $i;
+              animation-direction: alternate-reverse;
+              background-color: $cd-bars-inv;
+            }
+        }
+    }
+}
+
+
+@keyframes bars {
+    0% {
+        transform: scaleY(0.5);
+
+    }
+    100% {
+        transform: scaleY(1.0);
     }
 }

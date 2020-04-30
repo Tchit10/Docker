@@ -1,13 +1,63 @@
 .load {
-  width: 30vh;
-  height: 22.5vh;
+  width: 10vh;
+  height: 7.5vh;
   display: flex;
   justify-content: space-evenly;
 }
 .load__bar {
   background-color: #15DEA5;
   height: 100%;
-  width: 3vh;
+  width: 1vh;
+  animation: bars 1000ms backwards infinite ease-out alternate;
+}
+.load__bar--1 {
+  animation-delay: 200ms;
+}
+.load__bar--1-inv {
+  animation-delay: 200ms;
+  animation-direction: alternate-reverse;
+  background-color: #0E397F;
+}
+.load__bar--2 {
+  animation-delay: 400ms;
+}
+.load__bar--2-inv {
+  animation-delay: 400ms;
+  animation-direction: alternate-reverse;
+  background-color: #0E397F;
+}
+.load__bar--3 {
+  animation-delay: 600ms;
+}
+.load__bar--3-inv {
+  animation-delay: 600ms;
+  animation-direction: alternate-reverse;
+  background-color: #0E397F;
+}
+.load__bar--4 {
+  animation-delay: 800ms;
+}
+.load__bar--4-inv {
+  animation-delay: 800ms;
+  animation-direction: alternate-reverse;
+  background-color: #0E397F;
+}
+.load__bar--5 {
+  animation-delay: 1000ms;
+}
+.load__bar--5-inv {
+  animation-delay: 1000ms;
+  animation-direction: alternate-reverse;
+  background-color: #0E397F;
+}
+
+@keyframes bars {
+  0% {
+    transform: scaleY(0.5);
+  }
+  100% {
+    transform: scaleY(1);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
